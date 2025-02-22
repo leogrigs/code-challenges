@@ -1,5 +1,5 @@
-# Runtime: 0ms
-# Memory: 12.56MB
+# Runtime 0ms
+# Memory 12.56MB
 
 class Solution(object):
     def kidsWithCandies(self, candies, extraCandies):
