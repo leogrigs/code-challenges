@@ -1,4 +1,4 @@
-# Runtime 601ms
+# Runtime 0ms
 # Memory 12.8MB
 
 class Solution(object):
@@ -9,7 +9,12 @@ class Solution(object):
         :rtype: List[List[int]]
         """
 
-        list1 = set([x for x in nums1 if x not in nums2])
-        list2 = set([y for y in nums2 if y not in nums1])
+        list1 = set(nums1)
+        list2 = set(nums2)
+
+        list1.difference_update(set(nums2))
+        list2.difference_update(set(nums1))
 
         return [list(list1), list(list2)]
+
+        
